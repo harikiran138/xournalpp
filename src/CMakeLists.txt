@@ -37,14 +37,14 @@ add_subdirectory(util)
 add_subdirectory(core)
 
 ##############################
-# xournalpp-wrapper: catches crashes
+# novaboard-wrapper: catches crashes
 ##############################
 
 # The crash dialog's ui file is stored as gresource to make sure the wrapper is standalone
 find_program(GLIB_COMPILE_RESOURCES NAMES glib-compile-resources REQUIRED)
 
-set(XOURNAL_WRAPPER_GRESOURCE_C   xournalpp-wrapper.gresource.c)
-set(XOURNAL_WRAPPER_GRESOURCE_XML exe/xournalpp-wrapper.gresource.xml)
+set(XOURNAL_WRAPPER_GRESOURCE_C   novaboard-wrapper.gresource.c)
+set(XOURNAL_WRAPPER_GRESOURCE_XML exe/novaboard-wrapper.gresource.xml)
 
 add_custom_command(
     OUTPUT ${XOURNAL_WRAPPER_GRESOURCE_C}
@@ -62,33 +62,33 @@ add_custom_command(
 )
 
 add_custom_target(
-    xournalpp-wrapper-resource
+    novaboard-wrapper-resource
     DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/${XOURNAL_WRAPPER_GRESOURCE_C}
 )
 
-add_executable(xournalpp-wrapper exe/Xournalpp-wrapper.cpp ${CMAKE_CURRENT_BINARY_DIR}/${XOURNAL_WRAPPER_GRESOURCE_C})
+add_executable(novaboard-wrapper exe/Xournalpp-wrapper.cpp ${CMAKE_CURRENT_BINARY_DIR}/${XOURNAL_WRAPPER_GRESOURCE_C})
 set_source_files_properties(
     ${CMAKE_CURRENT_BINARY_DIR}/${XOURNAL_WRAPPER_GRESOURCE_C}
     PROPERTIES GENERATED TRUE
 )
 
-add_dependencies(xournalpp-wrapper xournalpp-wrapper-resource)
-target_link_libraries(xournalpp-wrapper
+add_dependencies(novaboard-wrapper novaboard-wrapper-resource)
+target_link_libraries(novaboard-wrapper
         PUBLIC xoj::defaults xoj::util xoj::external_modules)
-set_target_properties(xournalpp-wrapper PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}"
+set_target_properties(novaboard-wrapper PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}"
         MACOSX_BUNDLE $<IF:$<PLATFORM_ID:Darwin>,TRUE,${CMAKE_MACOSX_BUNDLE}>
         WIN32_EXECUTABLE $<IF:$<PLATFORM_ID:Windows>,TRUE,${CMAKE_WIN32_EXECUTABLE}>
         )
-target_include_directories(xournalpp-wrapper PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
+target_include_directories(novaboard-wrapper PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
 
 
 ##############################
-# xournalpp main program
+# novaboard main program
 ##############################
 
-add_executable(xournalpp exe/Xournalpp.cpp)
-target_link_libraries(xournalpp PRIVATE xoj::core xoj::util)
-set_target_properties(xournalpp PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}"
+add_executable(novaboard exe/Xournalpp.cpp)
+target_link_libraries(novaboard PRIVATE xoj::core xoj::util)
+set_target_properties(novaboard PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}"
         MACOSX_BUNDLE $<IF:$<PLATFORM_ID:Darwin>,TRUE,${CMAKE_MACOSX_BUNDLE}>
         WIN32_EXECUTABLE $<IF:$<PLATFORM_ID:Windows>,TRUE,${CMAKE_WIN32_EXECUTABLE}>
         )
@@ -107,9 +107,9 @@ set_target_properties(xournalpp PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BIN
 
 if (APPLE)
   # MacOS specific source files
-  file (GLOB xournalpp-sources-osx exe/osx/*.cpp exe/osx/*.h)
-  target_sources(xournalpp PRIVATE ${xournalpp-sources-osx})
-  target_include_directories(xournalpp PRIVATE exe)
+  file (GLOB novaboard-sources-osx exe/osx/*.cpp exe/osx/*.h)
+  target_sources(novaboard PRIVATE ${novaboard-sources-osx})
+  target_include_directories(novaboard PRIVATE exe)
 endif()
 
 if (WIN32)
@@ -117,31 +117,31 @@ if (WIN32)
   find_package(ImageMagick REQUIRED COMPONENTS magick)
   set (ICON_SIZES 16 32 48 256)
   foreach (SIZE IN LISTS ICON_SIZES)
-    set (RESIZED_ICON ${PROJECT_BINARY_DIR}/xournalpp-icon-${SIZE}.png)
+    set (RESIZED_ICON ${PROJECT_BINARY_DIR}/novaboard-icon-${SIZE}.png)
     add_custom_command (
                 OUTPUT ${RESIZED_ICON}
-                COMMAND rsvg-convert ${PROJECT_SOURCE_DIR}/ui/pixmaps/com.github.xournalpp.xournalpp.svg --width=${SIZE} --height=${SIZE} -o ${RESIZED_ICON}
+                COMMAND rsvg-convert ${PROJECT_SOURCE_DIR}/ui/pixmaps/com.github.novaboard.novaboard.svg --width=${SIZE} --height=${SIZE} -o ${RESIZED_ICON}
 	)
   set (ICON_DEPS ${ICON_DEPS} ${RESIZED_ICON})
   unset (RESIZED_ICON)
   endforeach()
   add_custom_command (
-    OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/win32/xournalpp.ico
-                COMMAND magick convert ${ICON_DEPS} ${CMAKE_CURRENT_BINARY_DIR}/win32/xournalpp.ico
+    OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/win32/novaboard.ico
+                COMMAND magick convert ${ICON_DEPS} ${CMAKE_CURRENT_BINARY_DIR}/win32/novaboard.ico
                 DEPENDS ${ICON_DEPS}
   )
   unset(ICON_SIZES)
   unset(ICON_DEPS)
-  add_custom_target(xournalpp_icon DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/win32/xournalpp.ico)
-  add_dependencies(xournalpp xournalpp_icon)
-  add_dependencies(xournalpp-wrapper xournalpp_icon)
+  add_custom_target(novaboard_icon DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/win32/novaboard.ico)
+  add_dependencies(novaboard novaboard_icon)
+  add_dependencies(novaboard-wrapper novaboard_icon)
   
   # windows specific source files
-  target_sources(xournalpp PRIVATE exe/win32/console.cpp)
-  target_sources(xournalpp-wrapper PRIVATE exe/win32/console.cpp)
+  target_sources(novaboard PRIVATE exe/win32/console.cpp)
+  target_sources(novaboard-wrapper PRIVATE exe/win32/console.cpp)
   if (MSVC)
-    target_sources(xournalpp PRIVATE exe/win32/gui_main.cpp)
-    target_sources(xournalpp-wrapper PRIVATE exe/win32/gui_main.cpp)
+    target_sources(novaboard PRIVATE exe/win32/gui_main.cpp)
+    target_sources(novaboard-wrapper PRIVATE exe/win32/gui_main.cpp)
   endif()
   
   # windows specific appinfo
@@ -152,19 +152,19 @@ if (WIN32)
   enable_language(RC)
 
   configure_file(exe/win32/xpp.rc.in ${CMAKE_CURRENT_BINARY_DIR}/win32/xpp.rc)
-  target_sources(xournalpp PRIVATE ${CMAKE_CURRENT_BINARY_DIR}/win32/xpp.rc)
-  target_sources(xournalpp-wrapper PRIVATE ${CMAKE_CURRENT_BINARY_DIR}/win32/xpp.rc)
+  target_sources(novaboard PRIVATE ${CMAKE_CURRENT_BINARY_DIR}/win32/xpp.rc)
+  target_sources(novaboard-wrapper PRIVATE ${CMAKE_CURRENT_BINARY_DIR}/win32/xpp.rc)
 endif ()
 # Until here
 ################################
 
-install(TARGETS xournalpp-wrapper
+install(TARGETS novaboard-wrapper
         RUNTIME DESTINATION bin
-        COMPONENT xournalpp-wrapper
+        COMPONENT novaboard-wrapper
         )
-install(TARGETS xournalpp
+install(TARGETS novaboard
         RUNTIME DESTINATION bin
-        COMPONENT xournalpp
+        COMPONENT novaboard
         )
 
 add_subdirectory(xoj-preview-extractor)

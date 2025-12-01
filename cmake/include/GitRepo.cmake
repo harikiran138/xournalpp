@@ -43,12 +43,12 @@ if (EXISTS "${PROJECT_SOURCE_DIR}/.git" AND PATH_GIT)
     string (FIND "${GIT_ORIGIN_REPO_PRE}" "." GIT_ORIGIN_REPO_DOT REVERSE)
     string (SUBSTRING "${GIT_ORIGIN_REPO_PRE}" 0 ${GIT_ORIGIN_REPO_DOT} GIT_ORIGIN_REPO)
   else ()
-    set (GIT_ORIGIN_OWNER "xournalpp")
-    set (GIT_ORIGIN_REPO "xournalpp")
+    set (GIT_ORIGIN_OWNER "novaboard")
+    set (GIT_ORIGIN_REPO "novaboard")
   endif ()
 endif ()
 
 # Hardcode bugreport address instead of using ${GIT_ORIGIN_OWNER} which is just a directory name for local clones
-set (PROJECT_BUGREPORT "https://github.com/xournalpp/xournalpp/issues/new?assignees=&labels=bug&projects=&template=bug_report.yml")
-set (PROJECT_CRASHREPORT "https://github.com/xournalpp/xournalpp/issues/new?template=crash_report.yml")
+set (PROJECT_BUGREPORT "https://github.com/novaboard/novaboard/issues/new?assignees=&labels=bug&projects=&template=bug_report.yml")
+set (PROJECT_CRASHREPORT "https://github.com/novaboard/novaboard/issues/new?template=crash_report.yml")
 

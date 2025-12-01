@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2019 Tobias Mueller <tobiasmue@gnome.org>  -->
 <component type="desktop">
-  <id>com.github.xournalpp.xournalpp</id>
-  <translation type="gettext">xournalpp</translation>
-  <name>Xournal++</name>
+  <id>com.github.novaboard.novaboard</id>
+  <translation type="gettext">novaboard</translation>
+  <name>Novaboard</name>
   <summary>Take handwritten notes</summary>
-  <developer_name>Xournalpp Developers</developer_name>
+  <developer_name>Novaboard Developers</developer_name>
   <description>
     <p>
-      Xournal++ is a hand note-taking software written in C++ with the target of
+      Novaboard is a hand note-taking software written in C++ with the target of
       flexibility, functionality and speed. Stroke recognizer and other parts are
       based on Xournal Code, which you can find at sourceforge. It supports GNU/Linux
       (e.g. Ubuntu, Debian, Arch, SUSE), macOS and Windows. Supports pen input
       from devices such as Wacom Tablets.
     </p>
     <p>
-      Xournal++ features:
+      Novaboard features:
     </p>
     <ul>
       <li>Supports pressure-sensitive styluses and digital pen tables (e.g. Wacom, Huion, XP Pen, etc. tablets)</li>
@@ -48,9 +48,9 @@
   </description>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0</project_license>
-  <url type="bugtracker">https://github.com/xournalpp/xournalpp/issues</url>
-  <url type="help">https://xournalpp.github.io/community/help/</url>
-  <url type="homepage">https://xournalpp.github.io/</url>
+  <url type="bugtracker">https://github.com/novaboard/novaboard/issues</url>
+  <url type="help">https://novaboard.github.io/community/help/</url>
+  <url type="homepage">https://novaboard.github.io/</url>
   <screenshots>
     <screenshot type="default">
       <image>https://raw.githubusercontent.com/xournalpp/xournalpp-examples/6aaf99756b0cc6a9d600b72490766330601daa67/appdata/screenshots_1.2.7/Note_taking.png</image>
@@ -69,10 +69,10 @@
     <color type="primary" scheme_preference="light">#77767b</color>
     <color type="primary" scheme_preference="dark">#241f31</color>
   </branding>
-  <launchable type="desktop-id">com.github.xournalpp.xournalpp.desktop</launchable>
+  <launchable type="desktop-id">com.github.novaboard.novaboard.desktop</launchable>
   <provides>
-    <id>xournalpp.desktop</id>
-    <binary>xournalpp</binary>
+    <id>novaboard.desktop</id>
+    <binary>novaboard</binary>
     <mediatype>application/x-xojpp</mediatype>
     <mediatype>application/x-xopp</mediatype>
     <mediatype>application/x-xopt</mediatype>

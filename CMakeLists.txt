@@ -20,16 +20,16 @@ endif()
 
 ## Project related Variables
 ## Also update changelog in debian folder!
-project(xournalpp
+project(novaboard
         VERSION 1.2.8
-        DESCRIPTION "Xournal++ - Open source hand note-taking program"
+        DESCRIPTION "Novaboard - Open source hand note-taking program"
         HOMEPAGE_URL "https://xournalpp.github.io/"
         LANGUAGES CXX C)
 # according to https://cmake.org/cmake/help/latest/command/project.html we must fix the suffix:
 # And https://gitlab.kitware.com/cmake/cmake/-/issues/16716 is still open:
 set(VERSION_SUFFIX "+dev")
 set(PROJECT_VERSION "${PROJECT_VERSION}${VERSION_SUFFIX}")
-set(xournalpp_VERSION ${PROJECT_VERSION})
+set(novaboard_VERSION ${PROJECT_VERSION})
 set(CMAKE_PROJECT_VERSION ${PROJECT_VERSION})
 set(PROJECT_CONTACT "core.xournalpp@github.com")
 
@@ -266,7 +266,7 @@ configure_file(
 
 # Development options
 option(DEV_CALL_LOG "Call log" OFF)
-add_compile_definitions(G_LOG_DOMAIN="xopp")
+add_compile_definitions(G_LOG_DOMAIN="novaboard")
 
 # Debug options
 option(DEBUG_INPUT "Input debugging, e.g. eraser events etc" OFF)
@@ -331,8 +331,8 @@ configure_file(
         ESCAPE_QUOTES @ONLY
 )
 
-option(xournalpp_LINT "enable lint (clang-tidy) target" OFF)
-if (xournalpp_LINT)
+option(novaboard_LINT "enable lint (clang-tidy) target" OFF)
+if (novaboard_LINT)
     include(clang-tidy)
 endif ()
 
@@ -340,7 +340,7 @@ endif ()
 add_subdirectory(src)
 
 ## Tests ##
-option (ENABLE_GTEST "Enable gtest build for xournalpp application" OFF)
+option (ENABLE_GTEST "Enable gtest build for novaboard application" OFF)
 if (ENABLE_GTEST)
   enable_testing()
   add_subdirectory (test ${CMAKE_BINARY_DIR}/test EXCLUDE_FROM_ALL)
@@ -356,20 +356,20 @@ add_subdirectory (man)
 
 # Install resources
 install(DIRECTORY ui
-        DESTINATION "share/xournalpp"
-        COMPONENT xournalpp
+        DESTINATION "share/novaboard"
+        COMPONENT novaboard
         )
 install(DIRECTORY plugins
-        DESTINATION "share/xournalpp"
-        COMPONENT xournalpp
+        DESTINATION "share/novaboard"
+        COMPONENT novaboard
         )
 install(DIRECTORY resources
-        DESTINATION "share/xournalpp"
-        COMPONENT xournalpp
+        DESTINATION "share/novaboard"
+        COMPONENT novaboard
         )
 install(DIRECTORY palettes
-        DESTINATION "share/xournalpp"
-        COMPONENT xournalpp
+        DESTINATION "share/novaboard"
+        COMPONENT novaboard
         )
 
 # Install desktop shortcuts for Linux
@@ -407,7 +407,7 @@ configure_file(
 add_custom_target(uninstall
         COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/cmake/cmake_uninstall.cmake
 
-        COMMENT "Uninstall entire Xournal++"
+        COMMENT "Uninstall entire Novaboard"
         )
 
 message("
@@ -434,8 +434,8 @@ set(CPACK_PACKAGE_NAME ${PROJECT_NAME})
 set(CPACK_PACKAGE_VERSION ${PROJECT_VERSION}~git${PACKAGE_TIMESTAMP}-${RELEASE_IDENTIFIER}-${DISTRO_CODENAME})
 set(CPACK_PACKAGE_DESCRIPTION_FILE "${PROJECT_SOURCE_DIR}/package_description")
 set(CPACK_PACKAGE_CONTACT "${PROJECT_CONTACT}")
-set(CPACK_PACKAGE_INSTALL_DIRECTORY "Xournal++")
-set(CPACK_PACKAGE_FILE_NAME "xournalpp-${PROJECT_VERSION}-${DISTRO_NAME}-${DISTRO_CODENAME}-${PACKAGE_ARCH}")
+set(CPACK_PACKAGE_INSTALL_DIRECTORY "Novaboard")
+set(CPACK_PACKAGE_FILE_NAME "novaboard-${PROJECT_VERSION}-${DISTRO_NAME}-${DISTRO_CODENAME}-${PACKAGE_ARCH}")
 set(CPACK_OUTPUT_FILE_PREFIX packages)
 set(CPACK_RESOURCE_FILE_LICENSE "${PROJECT_SOURCE_DIR}/LICENSE")
 set(CPACK_STRIP_FILES ON) # Debian packages must be stripped from debug messages, so lintian doesn't complain
@@ -456,14 +456,14 @@ if (CPACK_GENERATOR MATCHES "DEB")
     message("Preparing documentation for DEB package")
     add_custom_target(package_documentation ALL)
 
-    #Compress changelog and save it as share/doc/xournalpp/changelog.Debian.gz
+    #Compress changelog and save it as share/doc/novaboard/changelog.Debian.gz
     add_custom_command(TARGET package_documentation PRE_BUILD
             COMMAND gzip -c -9 -n "${PROJECT_SOURCE_DIR}/debian/changelog" > "changelog.Debian.gz" VERBATIM)
-    install(FILES "${CMAKE_CURRENT_BINARY_DIR}/changelog.Debian.gz" DESTINATION "share/doc/xournalpp/")
+    install(FILES "${CMAKE_CURRENT_BINARY_DIR}/changelog.Debian.gz" DESTINATION "share/doc/novaboard/")
 
     message("Install copyright for DEB package")
-    #Copy copyright to share/doc/xournalpp/copyright
-    install(FILES "${PROJECT_SOURCE_DIR}/debian/copyright" DESTINATION "share/doc/xournalpp/")
+    #Copy copyright to share/doc/novaboard/copyright
+    install(FILES "${PROJECT_SOURCE_DIR}/debian/copyright" DESTINATION "share/doc/novaboard/")
 endif ()
 
 if (NOT DEFINED CPACK_GENERATOR)

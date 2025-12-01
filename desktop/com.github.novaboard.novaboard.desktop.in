@@ -1,16 +1,16 @@
 [Desktop Entry]
 Type=Application
 
-Name=Xournal++
+Name=Novaboard
 GenericName=Note-taking application
 Comment=Take handwritten notes
 Keywords=tablet;Wacom;pen input;PDF Annotation;markup
 
-Exec=xournalpp-wrapper %f
+Exec=novaboard-wrapper %f
 SingleMainWindow=false
-StartupWMClass=com.github.xournalpp.xournalpp
+StartupWMClass=com.github.novaboard.novaboard
 Terminal=false
 StartupNotify=true
 MimeType=application/x-xoj;application/x-xojpp;application/x-xopp;application/x-xopt;application/pdf
-Icon=com.github.xournalpp.xournalpp
+Icon=com.github.novaboard.novaboard
 Categories=Office;GNOME;GTK

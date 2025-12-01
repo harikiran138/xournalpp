@@ -1,4 +1,4 @@
-## xournalpp-thumbnailer executable ##
+## novaboard-thumbnailer executable ##
 
 if (WIN32)
   # Windows does not support the thumbnailer like this
@@ -12,8 +12,8 @@ if (DEV_ENABLE_GCOV)
   add_link_options("--coverage")
 endif (DEV_ENABLE_GCOV)
 
-add_executable (xournalpp-thumbnailer
-        xournalpp-thumbnailer.cpp
+add_executable (novaboard-thumbnailer
+        novaboard-thumbnailer.cpp
         "${PROJECT_SOURCE_DIR}/src/util/GzUtil.cpp"
         "${PROJECT_SOURCE_DIR}/src/util/PlaceholderString.cpp"
         "${PROJECT_SOURCE_DIR}/src/util/StringUtils.cpp"
@@ -22,8 +22,8 @@ add_executable (xournalpp-thumbnailer
         "${PROJECT_SOURCE_DIR}/src/util/XojPreviewExtractor.cpp"
         )
 
-target_compile_features (xournalpp-thumbnailer PRIVATE cxx_std_20)
-target_link_libraries (xournalpp-thumbnailer
+target_compile_features (novaboard-thumbnailer PRIVATE cxx_std_20)
+target_link_libraries (novaboard-thumbnailer
   util
   ${ZLIB_LIBRARIES}
   ${librsvg_LDFLAGS}
@@ -31,19 +31,19 @@ target_link_libraries (xournalpp-thumbnailer
   ${ZIP_LDFLAGS}
   )
 
-target_include_directories (xournalpp-thumbnailer PRIVATE ${librsvg_INCLUDE_DIRS})
+target_include_directories (novaboard-thumbnailer PRIVATE ${librsvg_INCLUDE_DIRS})
 
-set (THUMBNAILER_BIN "xournalpp-thumbnailer")
+set (THUMBNAILER_BIN "novaboard-thumbnailer")
 
-add_custom_command (TARGET xournalpp-thumbnailer POST_BUILD
+add_custom_command (TARGET novaboard-thumbnailer POST_BUILD
   COMMAND ${CMAKE_STRIP} ${THUMBNAILER_BIN}
 )
 
 ## Install ##
 
-install (TARGETS xournalpp-thumbnailer
+install (TARGETS novaboard-thumbnailer
   RUNTIME DESTINATION bin
-  COMPONENT xournalpp-thumbnailer
+  COMPONENT novaboard-thumbnailer
 )
 
 ## Desktop install targets ##
@@ -53,13 +53,13 @@ configure_file (xournalpp-thumbnailer-xoj.schemas xournalpp-thumbnailer-xoj.sche
 add_custom_target (desktop-install-thumbnailer
   COMMAND "${PROJECT_SOURCE_DIR}/src/xoj-preview-extractor/desktop-install.sh" install
 
-  COMMENT "Install xournalpp-thumbnailer as xoj file thumbnail generator"
-  SOURCES xournalpp-thumbnailer xournalpp-thumbnailer-xoj.schemas desktop-install.sh
+  COMMENT "Install novaboard-thumbnailer as xoj file thumbnail generator"
+  SOURCES novaboard-thumbnailer.cpp xournalpp-thumbnailer-xoj.schemas desktop-install.sh
 )
 
 add_custom_target (desktop-uninstall-thumbnailer
   COMMAND "${PROJECT_SOURCE_DIR}/src/xoj-preview-extractor/desktop-install.sh" uninstall
 
-  COMMENT "Uninstall xournalpp-thumbnailer as xoj file thumbnail generator"
-  SOURCES xournalpp-thumbnailer xournalpp-thumbnailer-xoj.schemas desktop-install.sh
+  COMMENT "Uninstall novaboard-thumbnailer as xoj file thumbnail generator"
+  SOURCES novaboard-thumbnailer.cpp xournalpp-thumbnailer-xoj.schemas desktop-install.sh
 )
