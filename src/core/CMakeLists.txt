@@ -19,6 +19,7 @@ target_link_libraries(novaboard-core
 
 if (ENABLE_AUDIO)
     target_include_directories(novaboard-core PUBLIC ${ExternalAudioModules_INCLUDE_DIRS})
+    target_link_directories(novaboard-core PUBLIC ${ExternalAudioModules_LIBRARY_DIRS})
     set(AUDIO_LIBS ${ExternalAudioModules_LIBRARIES})
     if (APPLE)
         list(FILTER AUDIO_LIBS EXCLUDE REGEX "^(CoreAudio|AudioToolbox|AudioUnit|CoreFoundation|CoreServices)$")

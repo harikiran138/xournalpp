@@ -1,9 +1,9 @@
 /*
- * Xournal++
+ * Novaboard
  *
  * Latex settings
  *
- * @author Xournal++ Team
+ * @author Novaboard Team
  * https://github.com/xournalpp/xournalpp
  *
  * @license GNU GPLv2 or later
@@ -14,6 +14,7 @@
 #include <string>
 
 #include "model/Font.h"
+
 #include "filesystem.h"
 
 class LatexSettings {

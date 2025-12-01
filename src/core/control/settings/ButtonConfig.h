@@ -1,9 +1,9 @@
 /*
- * Xournal++
+ * Novaboard
  *
  * Configuration for Mouse Buttons, Eraser and default configuration
  *
- * @author Xournal++ Team
+ * @author Novaboard Team
  * https://github.com/xournalpp/xournalpp
  *
  * @license GNU GPLv2 or later
@@ -16,7 +16,7 @@
 #include "control/ToolEnums.h"               // for DrawingType, ToolType
 #include "control/settings/SettingsEnums.h"  // for Button
 #include "model/LineStyle.h"
-#include "util/Color.h"                      // for Color
+#include "util/Color.h"  // for Color
 
 class ToolHandler;
 

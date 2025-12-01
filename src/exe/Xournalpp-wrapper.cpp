@@ -70,7 +70,7 @@ static std::string makeCrashReportURL() {
     str << "&displayserver=" << escape(xoj::util::getGdkBackend()).get();
 #endif
 
-    str << "&version=" << escape(xoj::util::getXournalppVersion()).get();
+    str << "&version=" << escape(xoj::util::getNovaboardVersion()).get();
     str << "&gtk=" << gtk_major_version << "." << gtk_minor_version << "." << gtk_micro_version;
 
     return str.str();

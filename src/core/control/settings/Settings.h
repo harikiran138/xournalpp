@@ -1,9 +1,9 @@
 /*
- * Xournal++
+ * Novaboard
  *
  * Xournal Settings
  *
- * @author Xournal++ Team
+ * @author Novaboard Team
  * https://github.com/xournalpp/xournalpp
  *
  * @license GNU GPLv2 or later
@@ -717,7 +717,7 @@ private:
     double cursorHighlightBorderWidth{};
 
     /**
-     * If stock icons are used instead of Xournal++ icons when available
+     * If stock icons are used instead of Novaboard icons when available
      */
     bool useStockIcons{};
 

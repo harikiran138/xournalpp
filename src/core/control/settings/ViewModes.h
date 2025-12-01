@@ -1,9 +1,9 @@
 /*
- * Xournal++
+ * Novaboard
  *
  * View Mode struct & attribute definitions
  *
- * @author Xournal++ Team
+ * @author Novaboard Team
  * https://github.com/xournalpp/xournalpp
  *
  * @license GNU GPLv2 or later
@@ -11,24 +11,20 @@
 
 #pragma once
 
-#include <string>           // for string
-#include <vector>           // for vector
-#include <unordered_map>    // for unordered_map
+#include <string>         // for string
+#include <unordered_map>  // for unordered_map
+#include <vector>         // for vector
 
 using ViewModeId = size_t;
 
 // reserved default view mode ids
-enum PresetViewModeIds {
-    VIEW_MODE_DEFAULT = 0,
-    VIEW_MODE_FULLSCREEN = 1,
-    VIEW_MODE_PRESENTATION = 2
-};
+enum PresetViewModeIds { VIEW_MODE_DEFAULT = 0, VIEW_MODE_FULLSCREEN = 1, VIEW_MODE_PRESENTATION = 2 };
 
 // view mode attributes
 constexpr auto ATTR_GO_FULLSCREEN = "goFullscren";
-constexpr auto ATTR_SHOW_MENUBAR  = "showMenubar";
-constexpr auto ATTR_SHOW_TOOLBAR  = "showToolbar";
-constexpr auto ATTR_SHOW_SIDEBAR  = "showSidebar";
+constexpr auto ATTR_SHOW_MENUBAR = "showMenubar";
+constexpr auto ATTR_SHOW_TOOLBAR = "showToolbar";
+constexpr auto ATTR_SHOW_SIDEBAR = "showSidebar";
 
 struct ViewMode {
     bool goFullscreen{false};

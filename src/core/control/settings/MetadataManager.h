@@ -1,9 +1,9 @@
 /*
- * Xournal++
+ * Novaboard
  *
  * Last opened files with all settings
  *
- * @author Xournal++ Team
+ * @author Novaboard Team
  * https://github.com/xournalpp/xournalpp
  *
  * @license GNU GPLv2 or later
