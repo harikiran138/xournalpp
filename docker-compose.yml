@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: novaboard-backend
+    ports:
+      - "5001:5001"
+      - "5002:5002"
+    volumes:
+      - ./backend/data:/app/data
+      - ./backend/instance:/app/instance
+    environment:
+      - FLASK_ENV=production
+      - SECRET_KEY=novaboard_production_secret_key_change_in_production
+      - PYTHONUNBUFFERED=1
+    networks:
+      - novaboard-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5001/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: novaboard-frontend
+    ports:
+      - "8765:8765"
+    depends_on:
+      - backend
+    networks:
+      - novaboard-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:8765/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  novaboard-network:
+    driver: bridge
+
+volumes:
+  backend-data:
+  backend-instance:
