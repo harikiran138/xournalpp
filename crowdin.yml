@@ -1,5 +1,3 @@
-commit_message: "New translations %language% from Crowdin [skip ci]"
-append_commit_message: false
 files:
-  - source: /po/*.pot
-    translation: /po/%locale_with_underscore%.po
+  - source: /packages/excalidraw/locales/en.json
+    translation: /packages/excalidraw/locales/%locale%.json

@@ -1,8 +1,0 @@
-[website]
-Please visit our website https://github.com/novaboard/novaboard to learn about how to configure and use Novaboard and where you can get help!
-
-[plugins]
-In order to use plugins you must have Lua 5.3 installed. A detailed description of how to write and use plugins is provided on the website.
-
-[environment variables]
-A custom "locale" directory for localization files can be specified via the enivronment variable $TEXTDOMAINDIR. 

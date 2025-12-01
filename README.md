@@ -1,347 +1,130 @@
-# Novaboard
+<a href="https://excalidraw.com/" target="_blank" rel="noopener">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" alt="Excalidraw" srcset="https://excalidraw.nyc3.cdn.digitaloceanspaces.com/github/excalidraw_github_cover_2_dark.png" />
+    <img alt="Excalidraw" src="https://excalidraw.nyc3.cdn.digitaloceanspaces.com/github/excalidraw_github_cover_2.png" />
+  </picture>
+</a>
 
-[![Build Status](https://dev.azure.com/novaboard/novaboard/_apis/build/status/CI?branchName=master)](https://dev.azure.com/novaboard/novaboard/_build/latest?definitionId=1&branchName=master)
-[![Join the chat at https://gitter.im/novaboard/novaboard](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/novaboard/novaboard?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+<h4 align="center">
+  <a href="https://excalidraw.com">Excalidraw Editor</a> |
+  <a href="https://plus.excalidraw.com/blog">Blog</a> |
+  <a href="https://docs.excalidraw.com">Documentation</a> |
+  <a href="https://plus.excalidraw.com">Excalidraw+</a>
+</h4>
 
-<img src="readme/main.png" width=550px% title="Novaboard on GNU/Linux"/>
+<div align="center">
+  <h2>
+    An open source virtual hand-drawn style whiteboard. </br>
+    Collaborative and end-to-end encrypted. </br>
+  <br />
+  </h2>
+</div>
 
-## Translations
+<br />
+<p align="center">
+  <a href="https://github.com/excalidraw/excalidraw/blob/master/LICENSE">
+    <img alt="Excalidraw is released under the MIT license." src="https://img.shields.io/badge/license-MIT-blue.svg"  />
+  </a>
+  <a href="https://www.npmjs.com/package/@excalidraw/excalidraw">
+    <img alt="npm downloads/month" src="https://img.shields.io/npm/dm/@excalidraw/excalidraw"  />
+  </a>
+  <a href="https://docs.excalidraw.com/docs/introduction/contributing">
+    <img alt="PRs welcome!" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat"  />
+  </a>
+  <a href="https://discord.gg/UexuTaE">
+    <img alt="Chat on Discord" src="https://img.shields.io/discord/723672430744174682?color=738ad6&label=Chat%20on%20Discord&logo=discord&logoColor=ffffff&widge=false"/>
+  </a>
+  <a href="https://deepwiki.com/excalidraw/excalidraw">
+    <img alt="Ask DeepWiki" src="https://deepwiki.com/badge.svg" />
+  </a>
+  <a href="https://twitter.com/excalidraw">
+    <img alt="Follow Excalidraw on Twitter" src="https://img.shields.io/twitter/follow/excalidraw.svg?label=follow+@excalidraw&style=social&logo=twitter"/>
+  </a>
+</p>
 
-Would you like to see Novaboard in your own language? Translators are welcome to contribute to Novaboard.
-
-You can contribute translations on [Crowdin](https://crowdin.com/project/novaboard/)
-
-Interested in translating a new language? Discuss on [Gitter](https://gitter.im/novaboard/novaboard) or create a [new issue](https://github.com/novaboard/novaboard/issues) to unlock the language on Crowdin.
-
-**Thanks in advance!**
+<div align="center">
+  <figure>
+    <a href="https://excalidraw.com" target="_blank" rel="noopener">
+      <img src="https://excalidraw.nyc3.cdn.digitaloceanspaces.com/github%2Fproduct_showcase.png" alt="Product showcase" />
+    </a>
+    <figcaption>
+      <p align="center">
+        Create beautiful hand-drawn like diagrams, wireframes, or whatever you like.
+      </p>
+    </figcaption>
+  </figure>
+</div>
 
 ## Features
 
-Novaboard is a hand note-taking software written in C++ with the target of flexibility, functionality and speed.
-Stroke recognizer and other parts are based on Xournal Code, which you can find at [SourceForge](http://sourceforge.net/projects/xournal/).
+The Excalidraw editor (npm package) supports:
 
-Novaboard features:
+- 💯&nbsp;Free & open-source.
+- 🎨&nbsp;Infinite, canvas-based whiteboard.
+- ✍️&nbsp;Hand-drawn like style.
+- 🌓&nbsp;Dark mode.
+- 🏗️&nbsp;Customizable.
+- 📷&nbsp;Image support.
+- 😀&nbsp;Shape libraries support.
+- 🌐&nbsp;Localization (i18n) support.
+- 🖼️&nbsp;Export to PNG, SVG & clipboard.
+- 💾&nbsp;Open format - export drawings as an `.excalidraw` json file.
+- ⚒️&nbsp;Wide range of tools - rectangle, circle, diamond, arrow, line, free-draw, eraser...
+- ➡️&nbsp;Arrow-binding & labeled arrows.
+- 🔙&nbsp;Undo / Redo.
+- 🔍&nbsp;Zoom and panning support.
 
-- Supports pressure-sensitive styluses and digital pen tables (e.g. Wacom, Huion, XP Pen, etc. tablets)
-- Paper backgrounds for note-taking, scratch paper, or whiteboarding
-- Annotate on top of PDFs
-- Select text from the background PDF, copy, highlight or underline it or strike it through
-- Follow links from the background PDF
-- Export to a variety of formats including SVG, PNG and PDF, both from the GUI and command line
-- Different drawing tools (e.g. pen, highlighter) and stroke styles (e.g. solid, dotted)
-- Shape drawing (line, arrow, circle, rectangle, spline)
-- Use the set-square and compass tools for measurements or as a guide for drawing straight lines, circular arcs and radii
-- Fill shape functionality
-- Shape resizing and rotation
-- Rotation and grid snapping for precise alignment of objects
-- Input stabilization for smoother writing/drawing
-- Text tool for adding text in different fonts, colors, and sizes
-- Enhanced support for image insertion
-- Eraser with multiple configurations
-- LaTeX support (requires a working LaTeX installation) with customizable template and a resizable editor with syntax highlighting
-- Sidebar containing page previews with advanced page sorting, PDF bookmarks and layers (can be individually hidden/edited)
-- Allows mapping different tools/colors etc. to stylus/mouse buttons
-- Customizable toolbar with multiple configurations, e.g. to optimize toolbar for portrait/landscape
-- Custom color palette support using the .gpl format
-- Page template definitions
-- Bug reporting, auto-save, and auto backup tools
-- Audio recording and playback alongside with handwritten notes
-- Multi language support (over 20 languages supported)
-- Plugins using Lua scripting
+## Excalidraw.com
 
-## Mobile & web app
+The app hosted at [excalidraw.com](https://excalidraw.com) is a minimal showcase of what you can build with Excalidraw. Its [source code](https://github.com/excalidraw/excalidraw/tree/master/excalidraw-app) is part of this repository as well, and the app features:
 
-From mid 2020 to May 2021, a Flutter-written mobile app for **Android**, **Chrome OS** and **iOS** (unreleased) and the **web**
-has been developed, which supports the file format and most of the basic features of Novaboard.
-Unfortunately development has stalled and we have lost contact to the (single) developer. The web app is no longer available.
-You can still check out the [separate repository on GitLab](https://gitlab.com/TheOneWithTheBraid/xournalpp_mobile) or
-[Get it on Google Play](https://play.google.com/store/apps/details?id=online.xournal.mobile)
+- 📡&nbsp;PWA support (works offline).
+- 🤼&nbsp;Real-time collaboration.
+- 🔒&nbsp;End-to-end encryption.
+- 💾&nbsp;Local-first support (autosaves to the browser).
+- 🔗&nbsp;Shareable links (export to a readonly link you can share with others).
 
+We'll be adding these features as drop-in plugins for the npm package in the future.
 
-<table>
-<tr>
-<td>
+## Quick start
 
-## GNU/Linux
+**Note:** following instructions are for installing the Excalidraw [npm package](https://www.npmjs.com/package/@excalidraw/excalidraw) when integrating Excalidraw into your own app. To run the repository locally for development, please refer to our [Development Guide](https://docs.excalidraw.com/docs/introduction/development).
 
-<img src="readme/main.png" width=100% title="Novaboard on GNU/Linux"/>
+Use `npm` or `yarn` to install the package.
 
-</td><td>
-
-## Windows 10
-
-<img src="readme/main-win.png" width=100% title="Novaboard on Windows 10"/>
-
-</td></tr><tr><td>
-
-## macOS Catalina
-
-<img src="readme/main-mac.png" width=100% title="Novaboard on macOS Catalina"/>
-
-</td><td>
-
-## Novaboard Mobile on Chromium OS
-
-<img src="https://gitlab.com/TheOneWithTheBraid/xournalpp_mobile/-/raw/master/fastlane/metadata/android/en_US/images/tenInchScreenshots/03.png" width=100% title="Novaboard Mobile on Chromium OS"/>
-
-</td></tr><tr><td>
-
-## Toolbar / Page Background / Layer
-
-Multiple page background, easy selectable on the toolbar
-<img src="readme/background.png" width=100% title="Changing the page background in Novaboard"/>
-
-</td><td>
-
-## Layer sidebar and advanced layer selection
-
-<img src="readme/layer.png" width=100% title="Layers in Novaboard"/>
-
-</td></tr><tr><td>
-
-## Multiple predefined and fully customizable toolbars
-
-<img src="readme/toolbar.png" width=100% title="Custom toolbars in Novaboard"/>
-
-</td></tr></table>
-
-## User Manual and FAQ
-
-For general usage, consult the [User
-Manual](https://github.com/novaboard/novaboard/wiki/User-Manual). Answers to
-some common questions can be found in the
-[FAQ](https://github.com/novaboard/novaboard/wiki/Frequently-Asked-Questions-&-Problem-Solving).
-
-## Experimental Features
-
-Sometimes a feature is added that might not be rock solid, or the developers aren't sure if it is useful.
-Try these out and give us some feedback.
-
-Here are a few under development that you can play with now:
-
-- <img src="readme/floatingtoolboxmbmenu.png"  title="Novaboard"/> Assign a mouse button or stylus button to bring up a toolbox of toolbars right under the cursor. You can also modify what is in the toolbox through the usual View → Toolbars → Customize although **it won't appear unless you've assigned a button in preferences: mouse or stylus** (or selected a toolbar configuration that uses it).
-
-  - This is an experimental feature because not everything you can put in the toolbox behaves. So be aware.
-
-    <img src="readme/floatingtoolbox.png" width=25% />
-
-* Keep your eyes out for other experimental features in preferences as seen here:
-
-  DrawingTools: When drawing a box, circle etc, simulate ctrl or shift modifiers by the initial direction you move the mouse.
-
-  Action on Tool Tap: Allow a brief tap on the screen to bring up the floating toolbox and/or select an object. May work with pen and highlighter only.
-
-   <img src="readme/moreexperimentals.png" width=50% />
-
-## Installing
-
-The official releases of Novaboard can be found on the
-[Releases](https://github.com/novaboard/novaboard/releases) page. We provide
-binaries for Debian, Ubuntu, MacOS and Windows.
-For other GNU/Linux distributions (or older/newer ones), we also provide an
-AppImage that is binary compatible with any distribution released around or
-after Ubuntu 22.04. For installing Novaboard Mobile on handheld devices, please check out [Novaboard Mobile's instructions](https://gitlab.com/TheOneWithTheBraid/xournalpp_mobile#try-it-out)
-
-**A note for Ubuntu/Debian users**: The official binaries that we provide are
-only compatible with the _specific version of Debian or Ubuntu_ indicated by the
-file name. For example, if you are on Ubuntu 20.04, the binary whose name
-contains `Ubuntu-bionic` is _only_ compatible with Ubuntu 18.04. If your system
-is not one of the specific Debian or Ubuntu versions that are supported by the
-official binaries, we recommend you use either the PPA (Ubuntu only), the Flatpak, or the
-AppImage.
-
-There is also an _unstable_, [automated nightly
-release](https://github.com/novaboard/novaboard/releases/tag/nightly) that
-includes the very latest features and bug fixes.
-
-With the help of the community, Novaboard is also available on official repositories
-of some popular GNU/Linux distros and platforms.
-
-### Debian
-
-On Debian bookworm and Debian sid the `novaboard` package (stable version) is contained in the official repositories. Simply install via
-
-```sh
-sudo apt install novaboard
+```bash
+npm install react react-dom @excalidraw/excalidraw
+# or
+yarn add react react-dom @excalidraw/excalidraw
 ```
 
-There are also the official [Stable releases](https://github.com/novaboard/novaboard/releases) and
-_unstable_ [automated nightly releases](https://github.com/novaboard/novaboard/releases/tag/nightly).
-
-### Ubuntu and derivatives
-
-On distros based on Ubuntu 22.04 Jammy Jellyfish (and later) the `novaboard` package (stable version) is contained in the official repositories.
-Simply install via
-
-```sh
-sudo apt install novaboard
-```
-
-#### Stable PPA
-The latest stable version is available via the following [_unofficial_ PPA](https://github.com/novaboard/novaboard/issues/1013#issuecomment-692656810):
-
-```sh
-sudo add-apt-repository ppa:apandada1/novaboard-stable
-sudo apt update
-sudo apt install novaboard
-```
-
-#### Unstable PPA
-An _unstable_, nightly release is available for Ubuntu-based distributions via the following PPA:
-
-```sh
-sudo add-apt-repository ppa:andreasbutti/novaboard-master
-sudo apt update
-sudo apt install novaboard
-```
-
-This PPA is provided by the Novaboard team. While it has the latest features and
-bug fixes, it has also not been tested thoroughly and may break periodically (we
-try our best not to break things, though).
-
-### Fedora
-
-The [released version of
-novaboard](https://src.fedoraproject.org/rpms/novaboard) is available in the
-[main repository](https://bodhi.fedoraproject.org/updates/?packages=novaboard)
-via _Software_ application or the following command:
-
-```sh
-sudo dnf install novaboard
-```
-
-or
-
-```sh
-pkcon install novaboard
-```
-
-The bleeding edge packages synced to novaboard git master on a daily basis are available from [COPR luya/novaboard](https://copr.fedorainfracloud.org/coprs/luya/novaboard/).
-[![Copr build status](https://copr.fedorainfracloud.org/coprs/luya/novaboard/package/novaboard/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/luya/novaboard/package/novaboard/)
-
-### openSUSE
-
-On openSUSE Tumbleweed, the released version of Novaboard is available from the
-main repository:
-
-```sh
-sudo zypper in novaboard
-```
-
-For openSUSE Leap 15.0 and earlier, use the install link from
-[X11:Utilities](https://software.opensuse.org//download.html?project=X11%3AUtilities&package=novaboard).
-
-For all versions of openSUSE, bleeding edge packages synced to novaboard git
-master on a weekly basis are available from
-[home:badshah400:Staging](https://software.opensuse.org//download.html?project=home%3Abadshah400%3AStaging&package=novaboard).
-
-### Arch Linux
-
-The latest stable release is available [in the [extra]
-repository](https://www.archlinux.org/packages/extra/x86_64/novaboard/).
-
-To build the latest state of the master branch yourself, use [this AUR
-package](https://aur.archlinux.org/packages/novaboard-git/).
-
-### Solus
-
-The latest stable release is available in the main repository:
-
-```sh
-sudo eopkg it novaboard
-```
-
-
-### Chrome OS
-
-You can [enable the linux container](https://support.google.com/chromebook/answer/9145439?hl=en), and install the [Debian package](https://github.com/novaboard/novaboard?tab=readme-ov-file#debian) from the official Debian repositories.
-```sh
-sudo apt install novaboard
-```
-
-### Flatpak
-
-The Novaboard team officially supports a [FlatHub
-release](https://flathub.org/apps/details/com.github.novaboard.novaboard), which
-can be installed with
-
-```sh
-flatpak install flathub com.github.novaboard.novaboard
-```
-
-Note that for Novaboard to work properly, you must have at least one GTK theme
-and one icon theme installed on Flatpak. To enable LaTeX support, you will also
-need to install the TeX Live extension:
-
-```sh
-flatpak install flathub org.freedesktop.Sdk.Extension.texlive
-```
-
-The Flatpak manifest can be found at the [Novaboard Flatpak packaging
-repository](https://github.com/flathub/com.github.novaboard.novaboard), and all
-Flatpak-related packaging issues should be reported there.
-
-### Android
-
-Android is supported by Novaboard Mobile. It can be downloaded either on the [Tags page](https://gitlab.com/TheOneWithTheBraid/xournalpp_mobile/-/tags) or [from Google Play](https://play.google.com/store/apps/details?id=online.xournal.mobile).
-
-
-### iOS
-
-Unfortunately, the iOS app is not published yet in the Apple App Store. See [here](#mobile--web-app) to learn, why. Anyway, in the [Building section](#building) you can learn how to build an early preview.
-
-### Windows
-
-Official Windows releases are provided on the [Releases
-page](https://github.com/novaboard/novaboard/releases).
-
-### Mac OS X
-
-Mac OS X releases are provided on the [Releases
-page](https://github.com/novaboard/novaboard/releases).
-
-**Notes:**
-
-- There have been compatibility problems with Mac OS X Catalina regarding both
-  file permissions and stylus support
-  ([#1772](https://github.com/novaboard/novaboard/issues/1772) and
-  [#1757](https://github.com/novaboard/novaboard/issues/1757)). Unfortunately,
-  we don't have the resources to adequately support Catalina at this time. Help
-  would be appreciated!
-- Novaboard will be delivered with a patched GTK. Else, pressure sensitivity will not work on Mac
-  [#569](https://github.com/novaboard/novaboard/issues/569).
-
-## Building
-
-[GNU/Linux Build](readme/LinuxBuild.md)
-
-[Mac Build](readme/MacBuild.md)
-
-[Windows Build](readme/WindowsBuild.md)
-
-[Android Build](https://gitlab.com/TheOneWithTheBraid/xournalpp_mobile#getting-started)
-
-[iOS Build](https://gitlab.com/TheOneWithTheBraid/xournalpp_mobile#getting-started)
-
-## File format
-
-The file extension `.xopp` is a gzipped XML file. PDFs are not embedded into the file, so if the PDF is deleted, the background is lost. `.xopp` is basically the same file format as `.xoj`, which is used by Xournal. Therefore, Novaboard is able to read `.xoj` files, and can also export to `.xoj`. As soon as notes are exported to a `.xoj` file, all Novaboard specific extensions like additional background types, are lost.
-
-`.xopp` files can theoretically be read by Xournal, as long as you do not use any new features. Xournal does not open files that contain new attributes or unknown values, so Novaboard will add the extension `.xopp` to all saved files to indicate the potential presence of Novaboard-only features.
-
-All new files will be saved as `.xopp`. If an `.xoj` file that was created by Xournal is opened, the Save-As dialog will be displayed on save. If the `.xoj` file was created by Novaboard, the file will be overwritten on save and the file extension will not change.
-
-**We are currently introducing a new file format that can efficiently store attached PDF files and other attachments internally. We will still allow for attachments that are linked to external files. Please refer to [#937](https://github.com/novaboard/novaboard/issues/937) for further details.**
-
-## Building
-
-We support building on three operating systems:
-
-- [Linux](readme/LinuxBuild.md)
-- [MacOS](readme/MacBuild.md)
-- [Windows](readme/WindowsBuild.md)
-- [Windows on ARM (not officially supported)](readme/WindowsBuildArm.md)
+Check out our [documentation](https://docs.excalidraw.com/docs/@excalidraw/excalidraw/installation) for more details!
 
 ## Contributing
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md)
+- Missing something or found a bug? [Report here](https://github.com/excalidraw/excalidraw/issues).
+- Want to contribute? Check out our [contribution guide](https://docs.excalidraw.com/docs/introduction/contributing) or let us know on [Discord](https://discord.gg/UexuTaE).
+- Want to help with translations? See the [translation guide](https://docs.excalidraw.com/docs/introduction/contributing#translating).
+
+## Integrations
+
+- [VScode extension](https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor)
+- [npm package](https://www.npmjs.com/package/@excalidraw/excalidraw)
+
+## Who's integrating Excalidraw
+
+[Google Cloud](https://googlecloudcheatsheet.withgoogle.com/architecture) • [Meta](https://meta.com/) • [CodeSandbox](https://codesandbox.io/) • [Obsidian Excalidraw](https://github.com/zsviczian/obsidian-excalidraw-plugin) • [Replit](https://replit.com/) • [Slite](https://slite.com/) • [Notion](https://notion.so/) • [HackerRank](https://www.hackerrank.com/) • and many others
+
+## Sponsors & support
+
+If you like the project, you can become a sponsor at [Open Collective](https://opencollective.com/excalidraw) or use [Excalidraw+](https://plus.excalidraw.com/).
+
+## Thank you for supporting Excalidraw
+
+[<img src="https://opencollective.com/excalidraw/tiers/sponsors/0/avatar.svg?avatarHeight=120"/>](https://opencollective.com/excalidraw/tiers/sponsors/0/website) [<img src="https://opencollective.com/excalidraw/tiers/sponsors/1/avatar.svg?avatarHeight=120"/>](https://opencollective.com/excalidraw/tiers/sponsors/1/website) [<img src="https://opencollective.com/excalidraw/tiers/sponsors/2/avatar.svg?avatarHeight=120"/>](https://opencollective.com/excalidraw/tiers/sponsors/2/website) [<img src="https://opencollective.com/excalidraw/tiers/sponsors/3/avatar.svg?avatarHeight=120"/>](https://opencollective.com/excalidraw/tiers/sponsors/3/website) [<img src="https://opencollective.com/excalidraw/tiers/sponsors/4/avatar.svg?avatarHeight=120"/>](https://opencollective.com/excalidraw/tiers/sponsors/4/website) [<img src="https://opencollective.com/excalidraw/tiers/sponsors/5/avatar.svg?avatarHeight=120"/>](https://opencollective.com/excalidraw/tiers/sponsors/5/website) [<img src="https://opencollective.com/excalidraw/tiers/sponsors/6/avatar.svg?avatarHeight=120"/>](https://opencollective.com/excalidraw/tiers/sponsors/6/website) [<img src="https://opencollective.com/excalidraw/tiers/sponsors/7/avatar.svg?avatarHeight=120"/>](https://opencollective.com/excalidraw/tiers/sponsors/7/website) [<img src="https://opencollective.com/excalidraw/tiers/sponsors/8/avatar.svg?avatarHeight=120"/>](https://opencollective.com/excalidraw/tiers/sponsors/8/website) [<img src="https://opencollective.com/excalidraw/tiers/sponsors/9/avatar.svg?avatarHeight=120"/>](https://opencollective.com/excalidraw/tiers/sponsors/9/website) [<img src="https://opencollective.com/excalidraw/tiers/sponsors/10/avatar.svg?avatarHeight=120"/>](https://opencollective.com/excalidraw/tiers/sponsors/10/website)
+
+<a href="https://opencollective.com/excalidraw#category-CONTRIBUTE" target="_blank"><img src="https://opencollective.com/excalidraw/tiers/backers.svg?avatarHeight=32"/></a>
+
+Last but not least, we're thankful to these companies for offering their services for free:
+
+[![Vercel](./.github/assets/vercel.svg)](https://vercel.com) [![Sentry](./.github/assets/sentry.svg)](https://sentry.io) [![Crowdin](./.github/assets/crowdin.svg)](https://crowdin.com)
