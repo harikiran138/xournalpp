@@ -1,9 +1,9 @@
 /*
- * Xournal++
+ * Novaboard
  *
- * A single Xournal++ Plugin
+ * A single Novaboard Plugin
  *
- * @author Xournal++ Team
+ * @author Novaboard Team
  * https://github.com/xournalpp/xournalpp
  *
  * @license GNU GPLv2 or later
@@ -177,7 +177,7 @@ private:
     void loadIni();
 
     /// Load custom Lua Libraries
-    static void registerXournalppLibs(lua_State* luaPtr);
+    static void registerNovaboardLibs(lua_State* luaPtr);
 
     /// Add the plugin folder to the lua path
     void addPluginToLuaPath();

@@ -1,9 +1,9 @@
 /*
- * Xournal++
+ * Novaboard
  *
  * Lua API, application library
  *
- * @author Xournal++ Team
+ * @author Novaboard Team
  * https://github.com/xournalpp/xournalpp
  *
  * @license GNU GPLv2 or later
@@ -2187,13 +2187,13 @@ static int applib_getToolInfo(lua_State* L) {
         auto lineStyle = StrokeStyle::formatStyle(toolHandler->getLineStyle());
 
 
-        lua_pushstring(L, toolType.data());   // value
-        lua_setfield(L, -2, "type");          // insert
+        lua_pushstring(L, toolType.data());  // value
+        lua_setfield(L, -2, "type");         // insert
 
         lua_newtable(L);  // beginning of "size" table
 
-        lua_pushstring(L, toolSize.data());   // value
-        lua_setfield(L, -2, "name");          // insert
+        lua_pushstring(L, toolSize.data());  // value
+        lua_setfield(L, -2, "name");         // insert
 
         lua_pushnumber(L, thickness);  // value
         lua_setfield(L, -2, "value");  // insert
@@ -2206,11 +2206,11 @@ static int applib_getToolInfo(lua_State* L) {
         lua_pushinteger(L, fillOpacity);     // value
         lua_setfield(L, -2, "fillOpacity");  // insert
 
-        lua_pushstring(L, drawingType.data());   // value
-        lua_setfield(L, -2, "drawingType");      // insert
+        lua_pushstring(L, drawingType.data());  // value
+        lua_setfield(L, -2, "drawingType");     // insert
 
-        lua_pushstring(L, lineStyle.data());   // value
-        lua_setfield(L, -2, "lineStyle");      // insert
+        lua_pushstring(L, lineStyle.data());  // value
+        lua_setfield(L, -2, "lineStyle");     // insert
     } else if (strcmp(mode, "pen") == 0) {
         auto size = toolSizeToString(toolHandler->getPenSize());
         double thickness = toolHandler->getToolThickness(TOOL_PEN)[toolSizeFromString(size.data())];
@@ -2225,8 +2225,8 @@ static int applib_getToolInfo(lua_State* L) {
 
         lua_newtable(L);  // beginning of "size" table
 
-        lua_pushstring(L, size.data());   // value
-        lua_setfield(L, -2, "name");      // insert
+        lua_pushstring(L, size.data());  // value
+        lua_setfield(L, -2, "name");     // insert
 
         lua_pushnumber(L, thickness);  // value
         lua_setfield(L, -2, "value");  // insert
@@ -2236,8 +2236,8 @@ static int applib_getToolInfo(lua_State* L) {
         lua_pushinteger(L, as_signed(uint32_t(color) & 0xffffffU));  // value
         lua_setfield(L, -2, "color");                                // insert
 
-        lua_pushstring(L, drawingType.data());   // value
-        lua_setfield(L, -2, "drawingType");      // insert
+        lua_pushstring(L, drawingType.data());  // value
+        lua_setfield(L, -2, "drawingType");     // insert
 
         lua_pushstring(L, lineStyle.c_str());  // value
         lua_setfield(L, -2, "lineStyle");      // insert
@@ -2260,8 +2260,8 @@ static int applib_getToolInfo(lua_State* L) {
 
         lua_newtable(L);  // beginning of "size" table
 
-        lua_pushstring(L, size.data());   // value
-        lua_setfield(L, -2, "name");      // insert
+        lua_pushstring(L, size.data());  // value
+        lua_setfield(L, -2, "name");     // insert
 
         lua_pushnumber(L, thickness);  // value
         lua_setfield(L, -2, "value");  // insert
@@ -2271,8 +2271,8 @@ static int applib_getToolInfo(lua_State* L) {
         lua_pushinteger(L, as_signed(uint32_t(color) & 0xffffffU));  // value
         lua_setfield(L, -2, "color");                                // insert
 
-        lua_pushstring(L, drawingType.data());   // value
-        lua_setfield(L, -2, "drawingType");      // insert
+        lua_pushstring(L, drawingType.data());  // value
+        lua_setfield(L, -2, "drawingType");     // insert
 
         lua_pushboolean(L, filled);     // value
         lua_setfield(L, -2, "filled");  // insert
@@ -2285,13 +2285,13 @@ static int applib_getToolInfo(lua_State* L) {
         auto size = toolSizeToString(toolHandler->getEraserSize());
         double thickness = toolHandler->getToolThickness(ToolType::TOOL_ERASER)[toolSizeFromString(size.data())];
 
-        lua_pushstring(L, type.data());   // value
-        lua_setfield(L, -2, "type");      // insert
+        lua_pushstring(L, type.data());  // value
+        lua_setfield(L, -2, "type");     // insert
 
         lua_newtable(L);  // beginning of "size" table
 
-        lua_pushstring(L, size.data());   // value
-        lua_setfield(L, -2, "name");      // insert
+        lua_pushstring(L, size.data());  // value
+        lua_setfield(L, -2, "name");     // insert
 
         lua_pushnumber(L, thickness);  // value
         lua_setfield(L, -2, "value");  // insert

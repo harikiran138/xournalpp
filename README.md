@@ -1,26 +1,26 @@
-# Xournal++
+# Novaboard
 
-[![Build Status](https://dev.azure.com/xournalpp/xournalpp/_apis/build/status/CI?branchName=master)](https://dev.azure.com/xournalpp/xournalpp/_build/latest?definitionId=1&branchName=master)
-[![Join the chat at https://gitter.im/xournalpp/xournalpp](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xournalpp/xournalpp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](https://dev.azure.com/novaboard/novaboard/_apis/build/status/CI?branchName=master)](https://dev.azure.com/novaboard/novaboard/_build/latest?definitionId=1&branchName=master)
+[![Join the chat at https://gitter.im/novaboard/novaboard](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/novaboard/novaboard?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-<img src="readme/main.png" width=550px% title="Xournal++ on GNU/Linux"/>
+<img src="readme/main.png" width=550px% title="Novaboard on GNU/Linux"/>
 
 ## Translations
 
-Would you like to see Xournal++ in your own language? Translators are welcome to contribute to Xournal++.
+Would you like to see Novaboard in your own language? Translators are welcome to contribute to Novaboard.
 
-You can contribute translations on [Crowdin](https://crowdin.com/project/xournalpp/)
+You can contribute translations on [Crowdin](https://crowdin.com/project/novaboard/)
 
-Interested in translating a new language? Discuss on [Gitter](https://gitter.im/xournalpp/xournalpp) or create a [new issue](https://github.com/xournalpp/xournalpp/issues) to unlock the language on Crowdin.
+Interested in translating a new language? Discuss on [Gitter](https://gitter.im/novaboard/novaboard) or create a [new issue](https://github.com/novaboard/novaboard/issues) to unlock the language on Crowdin.
 
 **Thanks in advance!**
 
 ## Features
 
-Xournal++ (/ˌzɚnl̟ˌplʌsˈplʌs/) is a hand note-taking software written in C++ with the target of flexibility, functionality and speed.
+Novaboard is a hand note-taking software written in C++ with the target of flexibility, functionality and speed.
 Stroke recognizer and other parts are based on Xournal Code, which you can find at [SourceForge](http://sourceforge.net/projects/xournal/).
 
-Xournal++ features:
+Novaboard features:
 
 - Supports pressure-sensitive styluses and digital pen tables (e.g. Wacom, Huion, XP Pen, etc. tablets)
 - Paper backgrounds for note-taking, scratch paper, or whiteboarding
@@ -52,7 +52,7 @@ Xournal++ features:
 ## Mobile & web app
 
 From mid 2020 to May 2021, a Flutter-written mobile app for **Android**, **Chrome OS** and **iOS** (unreleased) and the **web**
-has been developed, which supports the file format and most of the basic features of Xournal++.
+has been developed, which supports the file format and most of the basic features of Novaboard.
 Unfortunately development has stalled and we have lost contact to the (single) developer. The web app is no longer available.
 You can still check out the [separate repository on GitLab](https://gitlab.com/TheOneWithTheBraid/xournalpp_mobile) or
 [Get it on Google Play](https://play.google.com/store/apps/details?id=online.xournal.mobile)
@@ -64,53 +64,53 @@ You can still check out the [separate repository on GitLab](https://gitlab.com/T
 
 ## GNU/Linux
 
-<img src="readme/main.png" width=100% title="Xournal++ on GNU/Linux"/>
+<img src="readme/main.png" width=100% title="Novaboard on GNU/Linux"/>
 
 </td><td>
 
 ## Windows 10
 
-<img src="readme/main-win.png" width=100% title="Xournal++ on Windows 10"/>
+<img src="readme/main-win.png" width=100% title="Novaboard on Windows 10"/>
 
 </td></tr><tr><td>
 
 ## macOS Catalina
 
-<img src="readme/main-mac.png" width=100% title="Xournal++ on macOS Catalina"/>
+<img src="readme/main-mac.png" width=100% title="Novaboard on macOS Catalina"/>
 
 </td><td>
 
-## Xournal++ Mobile on Chromium OS
+## Novaboard Mobile on Chromium OS
 
-<img src="https://gitlab.com/TheOneWithTheBraid/xournalpp_mobile/-/raw/master/fastlane/metadata/android/en_US/images/tenInchScreenshots/03.png" width=100% title="Xournal++ Mobile on Chromium OS"/>
+<img src="https://gitlab.com/TheOneWithTheBraid/xournalpp_mobile/-/raw/master/fastlane/metadata/android/en_US/images/tenInchScreenshots/03.png" width=100% title="Novaboard Mobile on Chromium OS"/>
 
 </td></tr><tr><td>
 
 ## Toolbar / Page Background / Layer
 
 Multiple page background, easy selectable on the toolbar
-<img src="readme/background.png" width=100% title="Changing the page background in Xournal++"/>
+<img src="readme/background.png" width=100% title="Changing the page background in Novaboard"/>
 
 </td><td>
 
 ## Layer sidebar and advanced layer selection
 
-<img src="readme/layer.png" width=100% title="Layers in Xournal++"/>
+<img src="readme/layer.png" width=100% title="Layers in Novaboard"/>
 
 </td></tr><tr><td>
 
 ## Multiple predefined and fully customizable toolbars
 
-<img src="readme/toolbar.png" width=100% title="Custom toolbars in Xournal++"/>
+<img src="readme/toolbar.png" width=100% title="Custom toolbars in Novaboard"/>
 
 </td></tr></table>
 
 ## User Manual and FAQ
 
 For general usage, consult the [User
-Manual](https://github.com/xournalpp/xournalpp/wiki/User-Manual). Answers to
+Manual](https://github.com/novaboard/novaboard/wiki/User-Manual). Answers to
 some common questions can be found in the
-[FAQ](https://github.com/xournalpp/xournalpp/wiki/Frequently-Asked-Questions-&-Problem-Solving).
+[FAQ](https://github.com/novaboard/novaboard/wiki/Frequently-Asked-Questions-&-Problem-Solving).
 
 ## Experimental Features
 
@@ -119,7 +119,7 @@ Try these out and give us some feedback.
 
 Here are a few under development that you can play with now:
 
-- <img src="readme/floatingtoolboxmbmenu.png"  title="Xournal++"/> Assign a mouse button or stylus button to bring up a toolbox of toolbars right under the cursor. You can also modify what is in the toolbox through the usual View → Toolbars → Customize although **it won't appear unless you've assigned a button in preferences: mouse or stylus** (or selected a toolbar configuration that uses it).
+- <img src="readme/floatingtoolboxmbmenu.png"  title="Novaboard"/> Assign a mouse button or stylus button to bring up a toolbox of toolbars right under the cursor. You can also modify what is in the toolbox through the usual View → Toolbars → Customize although **it won't appear unless you've assigned a button in preferences: mouse or stylus** (or selected a toolbar configuration that uses it).
 
   - This is an experimental feature because not everything you can put in the toolbox behaves. So be aware.
 
@@ -135,12 +135,12 @@ Here are a few under development that you can play with now:
 
 ## Installing
 
-The official releases of Xournal++ can be found on the
-[Releases](https://github.com/xournalpp/xournalpp/releases) page. We provide
+The official releases of Novaboard can be found on the
+[Releases](https://github.com/novaboard/novaboard/releases) page. We provide
 binaries for Debian, Ubuntu, MacOS and Windows.
 For other GNU/Linux distributions (or older/newer ones), we also provide an
 AppImage that is binary compatible with any distribution released around or
-after Ubuntu 22.04. For installing Xournal++ Mobile on handheld devices, please check out [Xournal++ Mobile's instructions](https://gitlab.com/TheOneWithTheBraid/xournalpp_mobile#try-it-out)
+after Ubuntu 22.04. For installing Novaboard Mobile on handheld devices, please check out [Novaboard Mobile's instructions](https://gitlab.com/TheOneWithTheBraid/xournalpp_mobile#try-it-out)
 
 **A note for Ubuntu/Debian users**: The official binaries that we provide are
 only compatible with the _specific version of Debian or Ubuntu_ indicated by the
@@ -151,125 +151,125 @@ official binaries, we recommend you use either the PPA (Ubuntu only), the Flatpa
 AppImage.
 
 There is also an _unstable_, [automated nightly
-release](https://github.com/xournalpp/xournalpp/releases/tag/nightly) that
+release](https://github.com/novaboard/novaboard/releases/tag/nightly) that
 includes the very latest features and bug fixes.
 
-With the help of the community, Xournal++ is also available on official repositories
+With the help of the community, Novaboard is also available on official repositories
 of some popular GNU/Linux distros and platforms.
 
 ### Debian
 
-On Debian bookworm and Debian sid the `xournalpp` package (stable version) is contained in the official repositories. Simply install via
+On Debian bookworm and Debian sid the `novaboard` package (stable version) is contained in the official repositories. Simply install via
 
 ```sh
-sudo apt install xournalpp
+sudo apt install novaboard
 ```
 
-There are also the official [Stable releases](https://github.com/xournalpp/xournalpp/releases) and
-_unstable_ [automated nightly releases](https://github.com/xournalpp/xournalpp/releases/tag/nightly).
+There are also the official [Stable releases](https://github.com/novaboard/novaboard/releases) and
+_unstable_ [automated nightly releases](https://github.com/novaboard/novaboard/releases/tag/nightly).
 
 ### Ubuntu and derivatives
 
-On distros based on Ubuntu 22.04 Jammy Jellyfish (and later) the `xournalpp` package (stable version) is contained in the official repositories.
+On distros based on Ubuntu 22.04 Jammy Jellyfish (and later) the `novaboard` package (stable version) is contained in the official repositories.
 Simply install via
 
 ```sh
-sudo apt install xournalpp
+sudo apt install novaboard
 ```
 
 #### Stable PPA
-The latest stable version is available via the following [_unofficial_ PPA](https://github.com/xournalpp/xournalpp/issues/1013#issuecomment-692656810):
+The latest stable version is available via the following [_unofficial_ PPA](https://github.com/novaboard/novaboard/issues/1013#issuecomment-692656810):
 
 ```sh
-sudo add-apt-repository ppa:apandada1/xournalpp-stable
+sudo add-apt-repository ppa:apandada1/novaboard-stable
 sudo apt update
-sudo apt install xournalpp
+sudo apt install novaboard
 ```
 
 #### Unstable PPA
 An _unstable_, nightly release is available for Ubuntu-based distributions via the following PPA:
 
 ```sh
-sudo add-apt-repository ppa:andreasbutti/xournalpp-master
+sudo add-apt-repository ppa:andreasbutti/novaboard-master
 sudo apt update
-sudo apt install xournalpp
+sudo apt install novaboard
 ```
 
-This PPA is provided by the Xournal++ team. While it has the latest features and
+This PPA is provided by the Novaboard team. While it has the latest features and
 bug fixes, it has also not been tested thoroughly and may break periodically (we
 try our best not to break things, though).
 
 ### Fedora
 
 The [released version of
-xournalpp](https://src.fedoraproject.org/rpms/xournalpp) is available in the
-[main repository](https://bodhi.fedoraproject.org/updates/?packages=xournalpp)
+novaboard](https://src.fedoraproject.org/rpms/novaboard) is available in the
+[main repository](https://bodhi.fedoraproject.org/updates/?packages=novaboard)
 via _Software_ application or the following command:
 
 ```sh
-sudo dnf install xournalpp
+sudo dnf install novaboard
 ```
 
 or
 
 ```sh
-pkcon install xournalpp
+pkcon install novaboard
 ```
 
-The bleeding edge packages synced to xournalpp git master on a daily basis are available from [COPR luya/xournalpp](https://copr.fedorainfracloud.org/coprs/luya/xournalpp/).
-[![Copr build status](https://copr.fedorainfracloud.org/coprs/luya/xournalpp/package/xournalpp/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/luya/xournalpp/package/xournalpp/)
+The bleeding edge packages synced to novaboard git master on a daily basis are available from [COPR luya/novaboard](https://copr.fedorainfracloud.org/coprs/luya/novaboard/).
+[![Copr build status](https://copr.fedorainfracloud.org/coprs/luya/novaboard/package/novaboard/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/luya/novaboard/package/novaboard/)
 
 ### openSUSE
 
-On openSUSE Tumbleweed, the released version of Xournal++ is available from the
+On openSUSE Tumbleweed, the released version of Novaboard is available from the
 main repository:
 
 ```sh
-sudo zypper in xournalpp
+sudo zypper in novaboard
 ```
 
 For openSUSE Leap 15.0 and earlier, use the install link from
-[X11:Utilities](https://software.opensuse.org//download.html?project=X11%3AUtilities&package=xournalpp).
+[X11:Utilities](https://software.opensuse.org//download.html?project=X11%3AUtilities&package=novaboard).
 
-For all versions of openSUSE, bleeding edge packages synced to xournalpp git
+For all versions of openSUSE, bleeding edge packages synced to novaboard git
 master on a weekly basis are available from
-[home:badshah400:Staging](https://software.opensuse.org//download.html?project=home%3Abadshah400%3AStaging&package=xournalpp).
+[home:badshah400:Staging](https://software.opensuse.org//download.html?project=home%3Abadshah400%3AStaging&package=novaboard).
 
 ### Arch Linux
 
 The latest stable release is available [in the [extra]
-repository](https://www.archlinux.org/packages/extra/x86_64/xournalpp/).
+repository](https://www.archlinux.org/packages/extra/x86_64/novaboard/).
 
 To build the latest state of the master branch yourself, use [this AUR
-package](https://aur.archlinux.org/packages/xournalpp-git/).
+package](https://aur.archlinux.org/packages/novaboard-git/).
 
 ### Solus
 
 The latest stable release is available in the main repository:
 
 ```sh
-sudo eopkg it xournalpp
+sudo eopkg it novaboard
 ```
 
 
 ### Chrome OS
 
-You can [enable the linux container](https://support.google.com/chromebook/answer/9145439?hl=en), and install the [Debian package](https://github.com/xournalpp/xournalpp?tab=readme-ov-file#debian) from the official Debian repositories.
+You can [enable the linux container](https://support.google.com/chromebook/answer/9145439?hl=en), and install the [Debian package](https://github.com/novaboard/novaboard?tab=readme-ov-file#debian) from the official Debian repositories.
 ```sh
-sudo apt install xournalpp
+sudo apt install novaboard
 ```
 
 ### Flatpak
 
-The Xournal++ team officially supports a [FlatHub
-release](https://flathub.org/apps/details/com.github.xournalpp.xournalpp), which
+The Novaboard team officially supports a [FlatHub
+release](https://flathub.org/apps/details/com.github.novaboard.novaboard), which
 can be installed with
 
 ```sh
-flatpak install flathub com.github.xournalpp.xournalpp
+flatpak install flathub com.github.novaboard.novaboard
 ```
 
-Note that for Xournal++ to work properly, you must have at least one GTK theme
+Note that for Novaboard to work properly, you must have at least one GTK theme
 and one icon theme installed on Flatpak. To enable LaTeX support, you will also
 need to install the TeX Live extension:
 
@@ -277,13 +277,13 @@ need to install the TeX Live extension:
 flatpak install flathub org.freedesktop.Sdk.Extension.texlive
 ```
 
-The Flatpak manifest can be found at the [Xournal++ Flatpak packaging
-repository](https://github.com/flathub/com.github.xournalpp.xournalpp), and all
+The Flatpak manifest can be found at the [Novaboard Flatpak packaging
+repository](https://github.com/flathub/com.github.novaboard.novaboard), and all
 Flatpak-related packaging issues should be reported there.
 
 ### Android
 
-Android is supported by Xournal++ Mobile. It can be downloaded either on the [Tags page](https://gitlab.com/TheOneWithTheBraid/xournalpp_mobile/-/tags) or [from Google Play](https://play.google.com/store/apps/details?id=online.xournal.mobile).
+Android is supported by Novaboard Mobile. It can be downloaded either on the [Tags page](https://gitlab.com/TheOneWithTheBraid/xournalpp_mobile/-/tags) or [from Google Play](https://play.google.com/store/apps/details?id=online.xournal.mobile).
 
 
 ### iOS
@@ -293,23 +293,23 @@ Unfortunately, the iOS app is not published yet in the Apple App Store. See [her
 ### Windows
 
 Official Windows releases are provided on the [Releases
-page](https://github.com/xournalpp/xournalpp/releases).
+page](https://github.com/novaboard/novaboard/releases).
 
 ### Mac OS X
 
 Mac OS X releases are provided on the [Releases
-page](https://github.com/xournalpp/xournalpp/releases).
+page](https://github.com/novaboard/novaboard/releases).
 
 **Notes:**
 
 - There have been compatibility problems with Mac OS X Catalina regarding both
   file permissions and stylus support
-  ([#1772](https://github.com/xournalpp/xournalpp/issues/1772) and
-  [#1757](https://github.com/xournalpp/xournalpp/issues/1757)). Unfortunately,
+  ([#1772](https://github.com/novaboard/novaboard/issues/1772) and
+  [#1757](https://github.com/novaboard/novaboard/issues/1757)). Unfortunately,
   we don't have the resources to adequately support Catalina at this time. Help
   would be appreciated!
-- Xournal++ will be delivered with a patched GTK. Else, pressure sensitivity will not work on Mac
-  [#569](https://github.com/xournalpp/xournalpp/issues/569).
+- Novaboard will be delivered with a patched GTK. Else, pressure sensitivity will not work on Mac
+  [#569](https://github.com/novaboard/novaboard/issues/569).
 
 ## Building
 
@@ -325,13 +325,13 @@ page](https://github.com/xournalpp/xournalpp/releases).
 
 ## File format
 
-The file extension `.xopp` is a gzipped XML file. PDFs are not embedded into the file, so if the PDF is deleted, the background is lost. `.xopp` is basically the same file format as `.xoj`, which is used by Xournal. Therefore, Xournal++ is able to read `.xoj` files, and can also export to `.xoj`. As soon as notes are exported to a `.xoj` file, all Xournal++ specific extensions like additional background types, are lost.
+The file extension `.xopp` is a gzipped XML file. PDFs are not embedded into the file, so if the PDF is deleted, the background is lost. `.xopp` is basically the same file format as `.xoj`, which is used by Xournal. Therefore, Novaboard is able to read `.xoj` files, and can also export to `.xoj`. As soon as notes are exported to a `.xoj` file, all Novaboard specific extensions like additional background types, are lost.
 
-`.xopp` files can theoretically be read by Xournal, as long as you do not use any new features. Xournal does not open files that contain new attributes or unknown values, so Xournal++ will add the extension `.xopp` to all saved files to indicate the potential presence of Xournal++-only features.
+`.xopp` files can theoretically be read by Xournal, as long as you do not use any new features. Xournal does not open files that contain new attributes or unknown values, so Novaboard will add the extension `.xopp` to all saved files to indicate the potential presence of Novaboard-only features.
 
-All new files will be saved as `.xopp`. If an `.xoj` file that was created by Xournal is opened, the Save-As dialog will be displayed on save. If the `.xoj` file was created by Xournal++, the file will be overwritten on save and the file extension will not change.
+All new files will be saved as `.xopp`. If an `.xoj` file that was created by Xournal is opened, the Save-As dialog will be displayed on save. If the `.xoj` file was created by Novaboard, the file will be overwritten on save and the file extension will not change.
 
-**We are currently introducing a new file format that can efficiently store attached PDF files and other attachments internally. We will still allow for attachments that are linked to external files. Please refer to [#937](https://github.com/xournalpp/xournalpp/issues/937) for further details.**
+**We are currently introducing a new file format that can efficiently store attached PDF files and other attachments internally. We will still allow for attachments that are linked to external files. Please refer to [#937](https://github.com/novaboard/novaboard/issues/937) for further details.**
 
 ## Building
 

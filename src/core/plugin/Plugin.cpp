@@ -44,7 +44,7 @@ Plugin::Plugin(Control* control, std::string name, fs::path path):
 }
 
 auto Plugin::getPluginFromLua(lua_State* lua) -> Plugin* {
-    lua_getfield(lua, LUA_REGISTRYINDEX, "Xournalpp_Plugin");
+    lua_getfield(lua, LUA_REGISTRYINDEX, "Novaboard_Plugin");
 
     if (lua_islightuserdata(lua, -1)) {
         auto* data = static_cast<Plugin*>(lua_touserdata(lua, -1));
@@ -186,7 +186,7 @@ void Plugin::loadIni() {
     this->valid = true;
 }
 
-void Plugin::registerXournalppLibs(lua_State* luaPtr) {
+void Plugin::registerNovaboardLibs(lua_State* luaPtr) {
     for (auto const& lib: loadedlibs) {
         luaL_requiref(luaPtr, lib.name, lib.func, 1);
         // remove lib
@@ -251,16 +251,17 @@ void Plugin::loadScript() {
         XojMsgBox::showPluginMessage(name, errMsg, true);
 
         // Error out if file can't be read
-        g_warning("Could not load plugin Lua file. Error: \"%s\", error code: %d (syntax error: %s)", errMsg, status, status == LUA_ERRSYNTAX ? "true" : "false");
+        g_warning("Could not load plugin Lua file. Error: \"%s\", error code: %d (syntax error: %s)", errMsg, status,
+                  status == LUA_ERRSYNTAX ? "true" : "false");
         this->valid = false;
         return;
     }
 
     // Register Plugin object to Lua instance
     lua_pushlightuserdata(lua.get(), this);
-    lua_setfield(lua.get(), LUA_REGISTRYINDEX, "Xournalpp_Plugin");
+    lua_setfield(lua.get(), LUA_REGISTRYINDEX, "Novaboard_Plugin");
 
-    registerXournalppLibs(lua.get());
+    registerNovaboardLibs(lua.get());
 
     addPluginToLuaPath();
 

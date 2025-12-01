@@ -66,7 +66,7 @@ add_custom_target(
     DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/${XOURNAL_WRAPPER_GRESOURCE_C}
 )
 
-add_executable(novaboard-wrapper exe/Xournalpp-wrapper.cpp ${CMAKE_CURRENT_BINARY_DIR}/${XOURNAL_WRAPPER_GRESOURCE_C})
+add_executable(novaboard-wrapper exe/Novaboard-wrapper.cpp ${CMAKE_CURRENT_BINARY_DIR}/${XOURNAL_WRAPPER_GRESOURCE_C})
 set_source_files_properties(
     ${CMAKE_CURRENT_BINARY_DIR}/${XOURNAL_WRAPPER_GRESOURCE_C}
     PROPERTIES GENERATED TRUE
@@ -86,7 +86,7 @@ target_include_directories(novaboard-wrapper PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}
 # novaboard main program
 ##############################
 
-add_executable(novaboard exe/Xournalpp.cpp)
+add_executable(novaboard exe/Novaboard.cpp)
 target_link_libraries(novaboard PRIVATE xoj::core xoj::util)
 set_target_properties(novaboard PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}"
         MACOSX_BUNDLE $<IF:$<PLATFORM_ID:Darwin>,TRUE,${CMAKE_MACOSX_BUNDLE}>
