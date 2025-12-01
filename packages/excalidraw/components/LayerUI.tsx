@@ -63,7 +63,7 @@ import { Island } from "./Island";
 import { JSONExportDialog } from "./JSONExportDialog";
 import { LaserPointerButton } from "./LaserPointerButton";
 import { Recorder } from "./Recorder";
-import { AITutor, ThreeDLibrary, VideoLibrary } from "./NovaBoardFeatures/NovaFeatures";
+
 
 import "./LayerUI.scss";
 import "./Toolbar.scss";
@@ -167,9 +167,7 @@ const LayerUI = ({
   const isCompactStylesPanel = stylesPanelMode === "compact";
   const tunnels = useInitializeTunnels();
 
-  const [showAITutor, setShowAITutor] = React.useState(false);
-  const [show3DLibrary, setShow3DLibrary] = React.useState(false);
-  const [showVideoLibrary, setShowVideoLibrary] = React.useState(false);
+
 
   const spacing = isCompactStylesPanel
     ? {
@@ -409,96 +407,7 @@ const LayerUI = ({
                         >
                           <Recorder />
                         </Island>
-                        <Island
-                          style={{
-                            marginLeft: spacing.collabMarginLeft,
-                            alignSelf: "center",
-                            height: "fit-content",
-                          }}
-                        >
-                          <button
-                            className="ToolIcon_type_button"
-                            style={{
-                              background: "rgba(255, 255, 255, 0.1)",
-                              backdropFilter: "blur(8px)",
-                              WebkitBackdropFilter: "blur(8px)",
-                              color: "white",
-                              border: "1px solid rgba(255, 255, 255, 0.2)",
-                              borderRadius: "var(--border-radius-lg)",
-                              padding: "0.6rem 1.2rem",
-                              fontWeight: "bold",
-                              cursor: "pointer",
-                              display: "flex",
-                              alignItems: "center",
-                              gap: "0.5rem",
-                              transition: "all 0.2s ease",
-                            }}
-                            onClick={() => setShowAITutor(true)}
-                            title="AI Tutor"
-                          >
-                            🤖 AI Tutor
-                          </button>
-                        </Island>
-                        <Island
-                          style={{
-                            marginLeft: spacing.collabMarginLeft,
-                            alignSelf: "center",
-                            height: "fit-content",
-                          }}
-                        >
-                          <button
-                            className="ToolIcon_type_button"
-                            style={{
-                              background: "rgba(255, 255, 255, 0.1)",
-                              backdropFilter: "blur(8px)",
-                              WebkitBackdropFilter: "blur(8px)",
-                              color: "white",
-                              border: "1px solid rgba(255, 255, 255, 0.2)",
-                              borderRadius: "var(--border-radius-lg)",
-                              padding: "0.6rem 1.2rem",
-                              fontWeight: "bold",
-                              cursor: "pointer",
-                              display: "flex",
-                              alignItems: "center",
-                              gap: "0.5rem",
-                              transition: "all 0.2s ease",
-                            }}
-                            onClick={() => setShow3DLibrary(true)}
-                            title="Nova3D"
-                          >
-                            🧊 Nova3D
-                          </button>
-                        </Island>
-                        <Island
-                          style={{
-                            marginLeft: spacing.collabMarginLeft,
-                            alignSelf: "center",
-                            height: "fit-content",
-                          }}
-                        >
-                          <button
-                            className="ToolIcon_type_button"
-                            style={{
-                              background: "rgba(255, 255, 255, 0.1)",
-                              backdropFilter: "blur(8px)",
-                              WebkitBackdropFilter: "blur(8px)",
-                              color: "white",
-                              border: "1px solid rgba(255, 255, 255, 0.2)",
-                              borderRadius: "var(--border-radius-lg)",
-                              padding: "0.6rem 1.2rem",
-                              fontWeight: "bold",
-                              cursor: "pointer",
-                              display: "flex",
-                              alignItems: "center",
-                              gap: "0.5rem",
-                              transition: "all 0.2s ease",
-                            }}
-                            onClick={() => setShowVideoLibrary(true)}
-                            title="Teaching Videos"
-                          >
-                            🎥 Videos
-                          </button>
-                        </Island>
+
                       </Stack.Row>
                     </Stack.Col>
                   </div>
@@ -734,9 +643,7 @@ const LayerUI = ({
           {renderSidebars()}
         </>
       )}
-      {showAITutor && <AITutor onClose={() => setShowAITutor(false)} elements={elements} />}
-      {show3DLibrary && <ThreeDLibrary onClose={() => setShow3DLibrary(false)} />}
-      {showVideoLibrary && <VideoLibrary onClose={() => setShowVideoLibrary(false)} />}
+
     </>
   );
 

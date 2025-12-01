@@ -57,7 +57,7 @@ const config = {
         title: "Excalidraw",
         logo: {
           alt: "Excalidraw Logo",
-          src: "img/logo.svg",
+          src: "img/logo.png",
         },
         items: [
           {

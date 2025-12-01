@@ -93,6 +93,25 @@ const Center = ({ children }: { children?: React.ReactNode }) => {
   return (
     <WelcomeScreenCenterTunnel.In>
       <div className="welcome-screen-center">
+        <video
+          src="/video1.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="welcome-screen-video"
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            zIndex: -1,
+            opacity: 0.3,
+            pointerEvents: "none",
+          }}
+        />
         {children || (
           <>
             <Logo />
