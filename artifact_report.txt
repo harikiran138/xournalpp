@@ -1,0 +1,31 @@
+# NovaBoard Model Library Ingestion Report
+Date: 2025-11-27
+Ingestion Status: SUCCESS
+
+## Summary
+- Total Models Ingested: 15
+- Source: Khronos Group glTF Sample Models
+- Storage Location: /var/classnova/media/models (mapped to backend/data/media/models)
+- Database: SQLite (backend/instance/novaboard.db)
+
+## Ingested Models
+1. DNA Helix (BoomBox) - Biology
+2. Spacesuit (Damaged Helmet) - History
+3. Physics Duck - Physics
+4. Avocado Cell - Biology
+5. Lantern - Engineering
+6. Antique Camera - History
+7. Corset - History
+8. Water Bottle - Chemistry
+9. Barramundi Fish - Biology
+10. Toy Car - Physics
+11. Reciprocating Saw - Engineering
+12. Gearbox - Engineering
+13. Buggy - Engineering
+14. Cesium Man - Biology
+15. Brain Stem - Biology
+
+## Notes
+- LOD generation was simulated (copied original file) due to missing 'gltf-pipeline' and 'blender' in the current environment.
+- Thumbnails are currently placeholders or generated on the fly by the frontend.
+- All models are verified to be valid GLB binary files.
