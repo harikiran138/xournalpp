@@ -1,0 +1,14 @@
+{
+  "id": "3191e69a-f254-40cb-9998-d3459496f688",
+  "name": "Gearbox",
+  "category": "Engineering",
+  "source": "Khronos Group",
+  "license": "CC-BY 4.0",
+  "original_url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/GearboxAssy/glTF-Binary/GearboxAssy.glb",
+  "filesize": 4958788,
+  "lod": {
+    "high": "model_high.glb",
+    "med": "model_med.glb",
+    "low": "model_low.glb"
+  }
+}

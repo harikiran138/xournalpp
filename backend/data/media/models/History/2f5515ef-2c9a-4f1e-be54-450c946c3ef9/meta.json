@@ -1,0 +1,14 @@
+{
+  "id": "2f5515ef-2c9a-4f1e-be54-450c946c3ef9",
+  "name": "Antique Camera",
+  "category": "History",
+  "source": "Khronos Group",
+  "license": "CC-BY 4.0",
+  "original_url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/AntiqueCamera/glTF-Binary/AntiqueCamera.glb",
+  "filesize": 20199648,
+  "lod": {
+    "high": "model_high.glb",
+    "med": "model_med.glb",
+    "low": "model_low.glb"
+  }
+}

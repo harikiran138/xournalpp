@@ -1,0 +1,107 @@
+[
+    {
+        "name": "DNA Helix (BoomBox)",
+        "category": "Biology",
+        "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/BoomBox/glTF-Binary/BoomBox.glb",
+        "source": "Khronos Group",
+        "license": "CC-BY 4.0"
+    },
+    {
+        "name": "Spacesuit (Damaged Helmet)",
+        "category": "History",
+        "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/DamagedHelmet/glTF-Binary/DamagedHelmet.glb",
+        "source": "Khronos Group",
+        "license": "CC-BY 4.0"
+    },
+    {
+        "name": "Physics Duck",
+        "category": "Physics",
+        "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Duck/glTF-Binary/Duck.glb",
+        "source": "Khronos Group",
+        "license": "CC0"
+    },
+    {
+        "name": "Avocado Cell",
+        "category": "Biology",
+        "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Avocado/glTF-Binary/Avocado.glb",
+        "source": "Khronos Group",
+        "license": "CC-BY 4.0"
+    },
+    {
+        "name": "Lantern",
+        "category": "Engineering",
+        "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Lantern/glTF-Binary/Lantern.glb",
+        "source": "Khronos Group",
+        "license": "CC-BY 4.0"
+    },
+    {
+        "name": "Antique Camera",
+        "category": "History",
+        "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/AntiqueCamera/glTF-Binary/AntiqueCamera.glb",
+        "source": "Khronos Group",
+        "license": "CC-BY 4.0"
+    },
+    {
+        "name": "Corset",
+        "category": "History",
+        "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Corset/glTF-Binary/Corset.glb",
+        "source": "Khronos Group",
+        "license": "CC-BY 4.0"
+    },
+    {
+        "name": "Water Bottle",
+        "category": "Chemistry",
+        "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/WaterBottle/glTF-Binary/WaterBottle.glb",
+        "source": "Khronos Group",
+        "license": "CC-BY 4.0"
+    },
+    {
+        "name": "Barramundi Fish",
+        "category": "Biology",
+        "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/BarramundiFish/glTF-Binary/BarramundiFish.glb",
+        "source": "Khronos Group",
+        "license": "CC-BY 4.0"
+    },
+    {
+        "name": "Toy Car",
+        "category": "Physics",
+        "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/ToyCar/glTF-Binary/ToyCar.glb",
+        "source": "Khronos Group",
+        "license": "CC-BY 4.0"
+    },
+    {
+        "name": "Reciprocating Saw",
+        "category": "Engineering",
+        "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/ReciprocatingSaw/glTF-Binary/ReciprocatingSaw.glb",
+        "source": "Khronos Group",
+        "license": "CC-BY 4.0"
+    },
+    {
+        "name": "Gearbox",
+        "category": "Engineering",
+        "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/GearboxAssy/glTF-Binary/GearboxAssy.glb",
+        "source": "Khronos Group",
+        "license": "CC-BY 4.0"
+    },
+    {
+        "name": "Buggy",
+        "category": "Engineering",
+        "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Buggy/glTF-Binary/Buggy.glb",
+        "source": "Khronos Group",
+        "license": "CC-BY 4.0"
+    },
+    {
+        "name": "Cesium Man",
+        "category": "Biology",
+        "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/CesiumMan/glTF-Binary/CesiumMan.glb",
+        "source": "Khronos Group",
+        "license": "CC-BY 4.0"
+    },
+    {
+        "name": "Brain Stem",
+        "category": "Biology",
+        "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/BrainStem/glTF-Binary/BrainStem.glb",
+        "source": "Khronos Group",
+        "license": "CC-BY 4.0"
+    }
+]

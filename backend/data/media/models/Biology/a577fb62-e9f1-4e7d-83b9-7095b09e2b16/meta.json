@@ -1,0 +1,14 @@
+{
+  "id": "a577fb62-e9f1-4e7d-83b9-7095b09e2b16",
+  "name": "Brain Stem",
+  "category": "Biology",
+  "source": "Khronos Group",
+  "license": "CC-BY 4.0",
+  "original_url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/BrainStem/glTF-Binary/BrainStem.glb",
+  "filesize": 3194848,
+  "lod": {
+    "high": "model_high.glb",
+    "med": "model_med.glb",
+    "low": "model_low.glb"
+  }
+}
