@@ -16,5 +16,17 @@ target_link_libraries(novaboard-core
         PRIVATE xoj::util ${novaboard_LDFLAGS}
         PUBLIC xoj::external_modules
         )
+
+if (ENABLE_AUDIO)
+    target_include_directories(novaboard-core PUBLIC ${ExternalAudioModules_INCLUDE_DIRS})
+    set(AUDIO_LIBS ${ExternalAudioModules_LIBRARIES})
+    if (APPLE)
+        list(FILTER AUDIO_LIBS EXCLUDE REGEX "^(CoreAudio|AudioToolbox|AudioUnit|CoreFoundation|CoreServices)$")
+        target_link_libraries(novaboard-core PUBLIC ${AUDIO_LIBS})
+        target_link_libraries(novaboard-core PUBLIC "-framework CoreAudio" "-framework AudioToolbox" "-framework AudioUnit" "-framework CoreFoundation" "-framework CoreServices")
+    else()
+        target_link_libraries(novaboard-core PUBLIC ${AUDIO_LIBS})
+    endif()
+endif ()
 target_include_directories(novaboard-core PUBLIC ${novaboard_include_dirs})
 add_library(xoj::core ALIAS novaboard-core)
