@@ -48,9 +48,9 @@
 	See https://stackoverflow.com/questions/39824345/use-css-to-style-gtktogglebutton-depending-on-the-state
 */
 #floatingToolbox button:checked {
-	/*background-color: lightblue;*/
-	border-color: lightblue;
-	box-shadow: inset 0px 0px 3px lightblue;
+	/*background-color: #007AFF;*/
+	border-color: #007AFF;
+	box-shadow: inset 0px 0px 3px #007AFF;
 
 	transition: background-color 0.5s ease, border-color 0.5s ease, margin 0.3s ease;
 }
@@ -73,9 +73,9 @@ window.darkMode #pdfFloatingToolGrid button {
 }
 
 window.darkMode #floatingToolbox button:checked {
-	background: rgba(85, 85, 95, 0.1);
-	border-color: lightblue;
-	box-shadow: 0px 0px 3px lightblue;
+	background: rgba(0, 122, 255, 0.2);
+	border-color: #007AFF;
+	box-shadow: 0px 0px 3px #007AFF;
 }
 
 window.darkMode #floatingToolbox > box,
@@ -94,10 +94,10 @@ toolbar.editing {
 	padding-top: 4px;
 	padding-bottom: 4px;
 
-	border: 4px dashed orange;
+	border: 4px dashed #FF9500;
 	border-radius: 3px;
 
-	box-shadow: inset -2px -2px 8px orange;
+	box-shadow: inset -2px -2px 8px #FF9500;
 }
 
 /*Fix ugly Background drop down button

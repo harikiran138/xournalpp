@@ -49,11 +49,11 @@
     <linearGradient
        id="D">
       <stop
-         style="stop-color:#3689e6;stop-opacity:1"
+         style="stop-color:#007AFF;stop-opacity:1"
          offset="0"
          id="stop2" />
       <stop
-         style="stop-color:#64baff;stop-opacity:1"
+         style="stop-color:#5AC8FA;stop-opacity:1"
          offset="1"
          id="stop4" />
     </linearGradient>
@@ -362,7 +362,7 @@
          id="stop134" />
       <stop
          offset="1"
-         style="stop-color:#3689e6;stop-opacity:.99425286"
+         style="stop-color:#007AFF;stop-opacity:.99425286"
          id="stop136" />
     </linearGradient>
     <linearGradient
@@ -807,11 +807,11 @@
          offset="0"
          id="stop323" />
       <stop
-         style="stop-color:#64baff;stop-opacity:1"
+         style="stop-color:#5AC8FA;stop-opacity:1"
          offset=".262"
          id="stop325" />
       <stop
-         style="stop-color:#3689e6;stop-opacity:1"
+         style="stop-color:#007AFF;stop-opacity:1"
          offset=".705"
          id="stop327" />
       <stop
@@ -1017,7 +1017,7 @@
          id="stop408" />
       <stop
          offset=".705"
-         style="stop-color:#3689e6;stop-opacity:1"
+         style="stop-color:#007AFF;stop-opacity:1"
          id="stop410" />
       <stop
          offset="1"
