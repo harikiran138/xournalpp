@@ -1,0 +1,332 @@
+/* Enhanced Global Glassmorphism & Interactive Styles */
+
+:root {
+    /* Enhanced Glass Properties */
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-bg-hover: rgba(255, 255, 255, 0.12);
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --glass-blur: blur(12px);
+
+    /* Interactive Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Particle Colors - PREMIUM ORANGE THEME */
+    --particle-primary: rgba(232, 89, 12, 0.4);
+    --particle-secondary: rgba(255, 152, 0, 0.3);
+    --color-primary: #e8590c;
+    --color-accent: #ff9800;
+}
+
+/* Glassmorphism Base Class */
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    transition: var(--transition-smooth);
+
+    &:hover {
+        background: var(--glass-bg-hover);
+        border-color: rgba(255, 255, 255, 0.25);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.45);
+    }
+}
+
+/* Animated Background Particles */
+.particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: var(--particle-primary);
+    animation: float-particle 15s infinite ease-in-out;
+
+    &:nth-child(even) {
+        background: var(--particle-secondary);
+        animation-duration: 20s;
+        animation-delay: -5s;
+    }
+}
+
+@keyframes float-particle {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.3;
+    }
+
+    25% {
+        transform: translate(100px, -100px) scale(1.2);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translate(-50px, 100px) scale(0.8);
+        opacity: 0.4;
+    }
+
+    75% {
+        transform: translate(150px, 50px) scale(1.1);
+        opacity: 0.5;
+    }
+}
+
+/* Enhanced Button Styles */
+.interactive-button {
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+    }
+
+    &:hover::before {
+        width: 300px;
+        height: 300px;
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+/* Ripple Effect */
+.ripple {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.4);
+        transform: translate(-50%, -50%);
+        transition: width 0.4s, height 0.4s;
+    }
+
+    &:active::after {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Glowing Border Animation - ORANGE THEME */
+.glow-border {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(45deg,
+                #e8590c,
+                #ff9800,
+                #e8590c,
+                #ff9800);
+        border-radius: inherit;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 0.3s;
+        animation: glow-rotate 3s linear infinite;
+    }
+
+    &:hover::before {
+        opacity: 0.7;
+    }
+}
+
+@keyframes glow-rotate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* Floating Animation */
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Pulse Animation */
+.pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Shimmer Effect */
+.shimmer {
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Card Hover Effect */
+.card-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+
+    &:hover {
+        transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+    }
+}
+
+/* Neon Text Effect */
+.neon-text {
+    text-shadow:
+        0 0 7px var(--color-primary),
+        0 0 10px var(--color-primary),
+        0 0 21px var(--color-primary),
+        0 0 42px #ff9966,
+        0 0 82px #ff9966;
+    animation: neon-flicker 1.5s infinite alternate;
+}
+
+@keyframes neon-flicker {
+
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+        opacity: 1;
+    }
+
+    20%,
+    24%,
+    55% {
+        opacity: 0.8;
+    }
+}
+
+/* Loading Skeleton */
+.skeleton {
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0.05) 25%,
+            rgba(255, 255, 255, 0.1) 50%,
+            rgba(255, 255, 255, 0.05) 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+    border-radius: 8px;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg,
+            var(--color-primary),
+            #ff9966);
+    border-radius: 10px;
+
+    &:hover {
+        background: var(--color-primary);
+    }
+}
+
+/* Selection */
+::selection {
+    background: var(--color-primary);
+    color: white;
+}
+
+/* Focus Visible */
+*:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}

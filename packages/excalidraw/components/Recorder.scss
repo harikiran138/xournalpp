@@ -1,0 +1,66 @@
+.recorder-button {
+    /* Glassmorphism Button */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--border-radius-lg);
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.4);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+
+    .record-dot {
+        width: 10px;
+        height: 10px;
+        background-color: #ff4757;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 8px rgba(255, 71, 87, 0.6);
+    }
+
+    &.recording {
+        background: rgba(255, 71, 87, 0.15);
+        color: #ff6b81;
+        border-color: rgba(255, 71, 87, 0.4);
+        box-shadow: 0 0 15px rgba(255, 71, 87, 0.2);
+
+        .record-dot {
+            background-color: #ff4757;
+            animation: pulse 1.5s infinite;
+        }
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 71, 87, 0.7);
+    }
+
+    70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 6px rgba(255, 71, 87, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 71, 87, 0);
+    }
+}
